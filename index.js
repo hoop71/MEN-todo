@@ -14,6 +14,8 @@ app.get('/', function(req,res){
     res.sendFile("index.html");
 });
 
+console.log(process.env.DATABASEURL);
+
 app.use('/api/todos', todoRoutes);
    
 app.listen(port, function(){
